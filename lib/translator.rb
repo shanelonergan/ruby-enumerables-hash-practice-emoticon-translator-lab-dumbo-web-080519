@@ -14,7 +14,7 @@ end
 
 def get_japanese_emoticon(file, english_emoticon)
   emoticons = load_library(file)
-  if emoticons.has_value?(english_emoticon)
+  if emoticons[:get_emoticon].has_key?(english_emoticon)
     japanese_emoticon = emoticons[:get_emoticon][english_emoticon]
     return japanese_emoticon
   else
