@@ -6,7 +6,7 @@ def load_library(file)
   emoticons = { get_meaning: {}, get_emoticon: {}}
   raw_emoticons.each do | key, value |
     emoticons[:get_meaning][value[1]] = key
-    binding.pry
+    emoticons[:get_emoticon][value[0]] = value[1]
   end
 end
 
