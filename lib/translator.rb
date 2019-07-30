@@ -15,8 +15,10 @@ end
 def get_japanese_emoticon(file, english_emoticon)
   emoticons = load_library(file)
   if emoticons[:get_emoticon].has_value?(english_emoticon)
-  japanese_emoticon = emoticons[:get_emoticon][english_emoticon]
-  return japanese_emoticon
+    japanese_emoticon = emoticons[:get_emoticon][english_emoticon]
+    return japanese_emoticon
+  else 
+    return "Sorry, that emoticon was not found"
 end
 
 def get_english_meaning(file, japanese_emoticon)
