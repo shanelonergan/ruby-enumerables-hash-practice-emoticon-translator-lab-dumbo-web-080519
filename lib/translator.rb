@@ -8,6 +8,8 @@ def load_library(file)
     emoticons[:get_meaning][value[1]] = key
     emoticons[:get_emoticon][value[0]] = value[1]
   end
+
+  return emoticons
 end
 
 def get_japanese_emoticon
